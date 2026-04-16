@@ -1,0 +1,13 @@
+sku,name,quantity,category,price,last_updated
+EL-001,USB-C Charging Cable,150,electronics,49.95,2026-03-15T10:30:00
+EL-002,Wireless Mouse,8,electronics,199.00,2026-03-20T14:00:00
+EL-003,27" Monitor,3,electronics,2499.00,2026-04-01T09:15:00
+CL-001,Safety Vest,200,clothing,89.50,2026-03-10T08:00:00
+CL-002,Work Gloves,5,clothing,45.00,2026-03-28T16:45:00
+FD-001,Coffee Beans 1kg,45,food,79.95,2026-04-02T07:30:00
+FD-002,Bottled Water 24-pack,12,food,59.00,2026-03-25T11:00:00
+TL-001,Adjustable Wrench,75,tools,129.00,2026-03-18T13:20:00
+TL-002,Cordless Drill,2,tools,899.00,2026-04-05T10:00:00
+TL-003,Measuring Tape 5m,60,tools,35.00,2026-03-22T15:30:00
+OT-001,Packing Tape Roll,300,other,15.00,2026-04-01T12:00:00
+OT-002,Label Printer,7,other,549.00,2026-03-30T09:45:00
