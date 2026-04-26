@@ -66,3 +66,32 @@ class ReportGenerator:
 
         lines.append("=" * 50)
         return "\n".join(lines)
+
+
+    def low_stock_report(self) -> str:
+        
+        low_products = self._store.low_stock_products()
+    
+        lines = [
+            "LOW STOCK ALERT",
+            "=" * 15,
+        ]
+    
+        # If no low-stock products
+        if not low_products:
+            lines.append("All products are sufficiently stocked.")
+            return "\n".join(lines)
+    
+        # Add each low-stock product
+        for product in low_products:
+            lines.append(
+                f"{product.sku:<8} {product.name:<25} qty: {product.quantity}"
+            )
+    
+        # Add footer
+        lines.append("-" * 15)
+        lines.append(
+            f"Total: {len(low_products)} products need restocking"
+        )
+    
+        return "\n".join(lines)
