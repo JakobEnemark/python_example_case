@@ -45,6 +45,20 @@ class InventoryStore:
             raise KeyError(f"No product with SKU '{sku}'")
         product.adjust_stock(delta)
 
+    def restock(self, target: int = 50) -> list[str]:   
+        restocked_skus = []
+    
+        for product in self._products.values():
+            if product.is_low_stock:
+                #calculate how many items till target
+                delta = target - product.quantity
+                
+                product.adjust_stock(delta)
+                #add it to the list of products that need restocking
+                restocked_skus.append(product.sku)
+    
+        return restocked_skus
+
     # ── Queries ──────────────────────────────────────────────────
 
     @property
@@ -110,3 +124,6 @@ class InventoryStore:
             for product in self._products.values():
                 writer.writerow(product.to_dict())
         return len(self._products)
+
+    
+
